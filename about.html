@@ -64,13 +64,33 @@
             </div>
         </main>
 
-        <footer>
-            <a href="mailto:henle@gmail.com">henle@gmail.com</a>
-            <br>
-            <script>
-                var date = document.lastModified;
-                document.write("Page last modified: " + date);
-            </script>
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Helen</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-contact">
+                Interested in working together? Email: 
+                <a href="mailto:helenstrustedservices@gmail.com">helenstrustedservices@gmail.com</a>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-metadata">
+                <p>&copy; 2026 Helen's Trusted Services. All Rights Reserved.</p>
+                <p class="footer-status"><strong>Site Status:</strong> Active &bull; Located in Washington State</p>
+                <p class="footer-date">
+                    <span>Last Updated: </span>
+                    <script>
+                        var lastMod = new Date(document.lastModified);
+                        var cleanDate = lastMod.toLocaleDateString();
+                        document.write(cleanDate);
+                    </script>
+                </p>
+            </div>
         </footer>
     </div>
 </body>
