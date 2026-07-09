@@ -1,0 +1,510 @@
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.contact-page label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-page button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #004f9e;
+    /* Match your school/brand colors! */
+    color: #CABA9C;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-page button:hover {
+    background-color: #003366;
+}
+
+
+/* Global Styles */
+
+html,
+body {
+    /* A soft, professional gold that makes the emerald green pop */
+    background-color: #556D4F;
+    /* Metallic Gold tint */
+
+    /* Alternatively, for a smoother "premium" feel, use this gradient: */
+    background: radial-gradient(circle, #556D4F 0%, #556D4F 100%);
+
+    background-attachment: fixed;
+    /* Keeps the color solid as you scroll */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.description,
+.services,
+.testimonial-card {
+    background-color: #ffffff;
+    /* Keeping these #CABA9C makes the text easy to read */
+    border: 3px solid #102820;
+    /* The emerald green really stands out against gold */
+}
+
+/* Header Styling */
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+
+    /* The Box Styling */
+    border: 4px solid #10201D;
+    /* Blue border on the outside */
+    background-color: #2E4332;
+    /* Emerald Green filling the entire box */
+
+    margin: 20px auto;
+    width: 95%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    /* Optional: rounds the blue border corners */
+}
+
+header h1 {
+    /* Remove background from here so it doesn't double up */
+    background-color: transparent;
+    color: #CABA9C;
+    /* #CABA9C text looks great against the green */
+    margin: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    /* Slightly larger for impact */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* Makes text pop against green */
+}
+
+
+
+
+/* Navigation Menu Styling */
+
+#navigation {
+    position: absolute;
+    /* Takes it out of the flex flow so H1 stays centered */
+    right: 40px;
+    /* "Slightly away from the edge" as requested */
+    z-index: 10;
+    /* Keeps the menu on top of everything else */
+}
+
+
+
+/* Dropdown Button Styling */
+.dropbtn {
+    background-color: #10201D;
+    color: #C1BCB4;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #C1BCB4;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    /* Aligns the menu to the right edge of the button */
+    background-color: #2E4332;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    /* Keeps corners clean */
+}
+
+.dropdown-content a {
+    color: #C1BCB4;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+    background-color: #C1BCB4;
+    color: #102820;
+}
+
+/* Show on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+/* Container to provide breathing room from the screen edges */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    /* Adjusted to 90% so the boxes don't touch screen edges */
+    margin: 40px auto;
+    /* Centers the container and adds space above/below */
+    gap: 20px;
+    /* Adds a guaranteed gap between the two boxes */
+}
+
+
+
+
+/* Description */
+
+/* Update the description box to take up the full width */
+.description {
+    width: 95%;
+    /* Takes up almost the full page width */
+    max-width: 1000px;
+    /* Prevents it from getting too wide on huge monitors */
+    margin: 40px auto;
+    /* Centers the box horizontally */
+    background-color: #C1BCB4;
+    border: 3px solid #102820;
+    /* Emerald Green border */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 40px;
+    /* Extra padding for a spacious, professional feel */
+}
+
+/* Styling the headers inside the box */
+.description h2 {
+    margin-top: 0;
+    color: #2E4332;
+    /* Darker green for contrast */
+    border-bottom: 2px solid #102820;
+    /* Underline effect for the title */
+    padding-bottom: 10px;
+    display: inline-block;
+    /* Makes the underline fit the text */
+}
+
+/* Styling the text and lists within the full-width box */
+.description p,
+.description li {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    /* High readability for technical content */
+    color: #333;
+}
+
+.description ul {
+    padding-left: 20px;
+}
+
+
+
+/* Services Section */
+
+
+.services h2 {
+    padding-left: 50px;
+    /* Moves the text over slightly from the left edge */
+    color: #2E4332;
+    background-color: #C1BCB4;
+    /* Matches your darker green branding */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    /* Space between header and the nav links */
+}
+
+/* Optional: Adding a small green accent line to the left of the header */
+.services h2 {
+    border-left: 5px solid #C1BCB4;
+    padding-left: 15px;
+    background-color: #C1BCB4;
+    /* Adjusted padding to accommodate the accent line */
+}
+
+/* Styling the Service Nav links to look like clean buttons */
+#serviceNav nav a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #C1BCB4;
+    /* Blue to match your header border */
+    font-weight: bold;
+    border: 1px solid #10201D;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#serviceNav nav a:hover {
+    background-color: #10201D;
+    color: #C1BCB4;
+
+}
+
+/* Navigation Bar Styling */
+
+#serviceNav nav {
+    display: block;
+    /* Changed from inline-block to allow 100% width */
+    background-color: #2E4332;
+    /* Emerald Green */
+    color: #CABA9C;
+    padding: 20px 0;
+    margin: 0 auto;
+    /* Removed the comma */
+    width: 100%;
+    text-align: center;
+}
+
+/* Style the links so they are readable */
+#serviceNav nav a {
+    color: #CABA9C;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+
+
+
+
+#photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Adds space between photos */
+    margin-top: 40px;
+    /* Adds space above the photos */
+}
+
+
+
+
+
+/* Testimonials Section */
+
+
+#testimonials-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* The centered box for the header */
+.testimonial-header {
+    width: 25%;
+    /* Box takes up 25% of the page width */
+    margin: 0 auto 30px auto;
+    /* Centers the box and adds space below it */
+    border: 3px solid #102820;
+    /* Solid Emerald Green border */
+    background-color: #C1BCB4;
+    padding: 10px 0;
+    /* Space inside the box above/below text */
+    border-radius: 4px;
+    /* Optional: sharp or slightly rounded corners */
+}
+
+.testimonial-header h2 {
+    margin: 0;
+    /* Removes default heading margins */
+    color: #2E4332;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Individual testimonial cards */
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    width: 30%;
+    background: #fdfdfd;
+    padding: 20px;
+    background-color: #C1BCB4;
+    border-left: 5px solid #102820;
+    /* Decorative accent on the side */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+
+.site-footer {
+    background-color: #2E4332;
+    /* Emerald Green */
+    color: #CABA9C;
+    /* Light Gold Text */
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 4px solid #10201D;
+    /* Dark frame color matching header */
+    border-radius: 8px;
+    margin: 40px auto 20px auto;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+/* Quick Navigation Links */
+.footer-links {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #CABA9C;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #C1BCB4;
+    /* Soft text shift color on hover */
+}
+
+/* Contact Block styles */
+.footer-contact {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-contact a {
+    color: #C1BCB4;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-contact a:hover {
+    color: #CABA9C;
+}
+
+/* Accent Break Line */
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #10201D;
+    width: 60%;
+    margin: 15px auto;
+}
+
+/* Bottom Metadata Information */
+.footer-metadata {
+    font-size: 0.9rem;
+    color: #C1BCB4;
+    line-height: 1.6;
+}
+
+.footer-metadata p {
+    margin: 5px 0;
+}
+
+.footer-status {
+    font-style: italic;
+}
+
+.footer-date {
+    font-size: 0.85rem;
+    color: #a49f96;
+    /* Subtle text muted accent color */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .description,
+    .credentials {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Table Styling matching the emerald, gold, and white theme */
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0 10px 0;
+    background-color: #ffffff;
+}
+
+.services-table th,
+.services-table td {
+    border: 2px solid #102820;
+    padding: 14px;
+    text-align: left;
+}
+
+.services-table th {
+    background-color: #2E4332;
+    color: #CABA9C;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.services-table tr:nth-child(even) {
+    background-color: #C1BCB4;
+}
+
+.services-table td a {
+    color: #102820;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.services-table td a:hover {
+    color: #2E4332;
+}
