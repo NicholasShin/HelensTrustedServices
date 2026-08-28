@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House &amp; Pet Sitting - Helen's Trusted Service</title>
+    <!-- Relative path to parent style folder -->
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <style>
+        /* Table styling matching the emerald and gold theme */
+        .rates-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0 10px 0;
+            background-color: #ffffff;
+        }
+        .rates-table th, .rates-table td {
+            border: 2px solid #102820;
+            padding: 12px;
+            text-align: left;
+        }
+        .rates-table th {
+            background-color: #2E4332;
+            color: #CABA9C;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
+        .rates-table tr:nth-child(even) {
+            background-color: #C1BCB4;
+        }
+        .rates-table td.price {
+            font-weight: bold;
+            color: #102820;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Helen's Trusted Service</h1>
+            <div id="navigation">
+                <nav class="dropdown">
+                    <button class="dropbtn">Menu &#9662;</button>
+                    <!-- Relative paths to root pages -->
+                    <div class="dropdown-content">
+                        <a href="../index.html">Home</a>
+                        <a href="../about.html">About Helen</a>
+                        <a href="../services.html">Services</a>
+                        <a href="../contact.html">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Main Info Box -->
+            <div class="description">
+                <h2>House, Plant, &amp; Pet Sitting 🏡🐶</h2>
+                <p>I offer house and pet sitting in the Olympia and surrounding area. I am respectful, reliable, and love pets. I will treat your home with the same care as my own.</p>
+                <p>I watch pets, retrieve mail, water plants, take out the garbage, maintain a live-in presence, along with following your specific instructions.</p>
+                <p>My goal is to ensure your time away from home is worry free, and your home is well looked after.</p>
+
+                <hr style="border: 0; border-top: 1px solid #102820; margin: 30px 0;">
+
+                <h3>Rates &amp; Services</h3>
+                
+                <!-- Rates Table -->
+                <table class="rates-table">
+                    <thead>
+                        <tr>
+                            <th>Service / Task</th>
+                            <th>Details &amp; Duration</th>
+                            <th>Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pet Check In</strong></td>
+                            <td>Feed, water, clean after cats, dogs, birds, plants, etc. (~1 hour or less)</td>
+                            <td class="price">$25</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dog Walk (Short)</strong></td>
+                            <td>Walk at your dog’s preferred pace and clean after them. (15–30 minutes)</td>
+                            <td class="price">$25 / dog</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dog Walk (Standard)</strong></td>
+                            <td>Walk at your dog’s preferred pace and clean after them. (~1 hour)</td>
+                            <td class="price">$45 / dog</td>
+                        </tr>
+                        <tr>
+                            <td><strong>House Sitting</strong></td>
+                            <td>Includes routine pet care, daily dog walk, and basic home tasks (trash, mail, plant watering).</td>
+                            <td class="price">$70 / night</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="baddie" style="margin-top: 30px;">
+                    <p>Treating your home and pets with care and respect.</p>
+                </div>
+            </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About Helen</a>
+                <a href="../services.html">Services</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+
+            <div class="footer-contact">
+                Interested in working together? Email: 
+                <a href="mailto:helen.trusted.services@example.com">helen.trusted.services@example.com</a>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-metadata">
+                <p>&copy; 2026 Helen's Trusted Services. All Rights Reserved.</p>
+                <p class="footer-status"><strong>Site Status:</strong> Active &bull; Located in Washington State</p>
+                <p class="footer-date">
+                    <span>Last Updated: </span>
+                    <script>
+                        var lastMod = new Date(document.lastModified);
+                        var cleanDate = lastMod.toLocaleDateString();
+                        document.write(cleanDate);
+                    </script>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
