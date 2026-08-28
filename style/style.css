@@ -648,7 +648,7 @@ header h1 {
     }
 
     header h1 {
-        font-size: 20px !important;
+        font-size: 30px !important;
         /* Smaller text scale for phone screens */
         line-height: 26px !important;
     }
@@ -656,9 +656,10 @@ header h1 {
     #navigation {
         position: absolute;
         right: 40px;
-        top: 55%;
-        /* Shifted down from 50% for lower placement */
-        transform: translateY(-50%);
+        bottom: 10px;
+        /* Anchors tab cleanly to the bottom edge */
+        top: auto;
+        transform: none;
         z-index: 10;
     }
 
