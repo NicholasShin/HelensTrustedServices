@@ -639,79 +639,73 @@ header h1 {
    ========================================================================== */
 
 @media (max-width: 768px) {
-/* ==========================================================================
+    /* ==========================================================================
    Header & Navigation (Menu Stacked Centered Below Title)
    ========================================================================== */
 
-header {
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Stacks H1 title and navigation vertically */
-    align-items: center;
-    justify-content: center;
-    height: auto;           /* Automatically expands header box to fit both elements */
-    padding: 20px;
-    border: 4px solid #10201D;
-    background-color: #2E4332;
-    margin: 20px auto;
-    width: 95%;
-    box-sizing: border-box;
-    border-radius: 8px;
-}
+    /* ==========================================================================
+   Header & Navigation (Forced Vertical Stack)
+   ========================================================================== */
 
-header h1 {
-    width: 100%;
-    text-align: center;
-    background-color: transparent;
-    color: #CABA9C;
-    margin: 0 0 15px 0;    /* Space beneath title pushes menu tab down */
-    font-size: 36px !important;
-    line-height: 44px !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-#navigation {
-    position: static;      /* Removes absolute positioning so it sits below H1 */
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: #10201D;
-    color: #C1BCB4;
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: bold;
-    border: 2px solid #C1BCB4;
-    border-radius: 6px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Keeps dropdown options centered under the button */
-    top: 100%;
-    background-color: #2E4332;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    overflow: hidden;
-    z-index: 20;
-}
-
-    .description {
-        padding: 20px 15px;
+    header {
+        display: flex !important;
+        flex-direction: column !important;
+        /* Forces title and menu to stack top-to-bottom */
+        justify-content: center !important;
+        align-items: center !important;
+        height: auto !important;
+        /* Unlocks the fixed 120px height constraint */
+        padding: 20px 15px !important;
+        border: 4px solid #10201D;
+        background-color: #2E4332;
+        margin: 20px auto;
         width: 95%;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+
+    header h1 {
+        width: 100% !important;
+        text-align: center !important;
+        background-color: transparent;
+        color: #CABA9C;
+        margin: 0 0 15px 0 !important;
+        /* Pushes menu button down away from text */
+        font-size: 25px !important;
+        line-height: 44px !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    #navigation {
+        position: static !important;
+        /* Overrides absolute positioning to place below H1 */
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        z-index: 10;
+    }
+
+    .dropdown {
+        position: relative !important;
+        display: inline-block !important;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        /* Centers dropdown options directly under button */
+        top: 100% !important;
+        background-color: #2E4332;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        overflow: hidden;
+        z-index: 20;
     }
 }
