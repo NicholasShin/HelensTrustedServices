@@ -709,3 +709,31 @@ header h1 {
         z-index: 20;
     }
 }
+
+/* ==========================================================================
+   Services Container (Centered & Aligned with .description)
+   ========================================================================== */
+
+.services {
+    width: 95%;
+    max-width: 90%;
+    margin: 40px auto;       /* Centers the box horizontally on the page */
+    text-align: center;      /* Centers the text inside */
+    background-color: #ffffff;
+    border: 3px solid #102820;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: hidden;        /* Keeps inner green/gold sections neatly inside the rounded corners */
+}
+
+.services h2 {
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+    color: #2E4332;
+    background-color: #C1BCB4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #102820;
+}
