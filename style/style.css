@@ -519,14 +519,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px; /* Reduced container height */
+    height: 100px;
+    /* Reduced container height */
     border: 4px solid #10201D;
     background-color: #2E4332;
     margin: 20px auto;
     width: 95%;
     box-sizing: border-box;
     border-radius: 8px;
-    padding: 0 120px 0 20px; /* Right padding reserves space for menu button */
+    padding: 0 120px 0 20px;
+    /* Right padding reserves space for menu button */
 }
 
 header h1 {
@@ -534,7 +536,8 @@ header h1 {
     color: #CABA9C;
     margin: 0;
     text-align: center;
-    font-size: 26px !important; /* Scaled down from 36px */
+    font-size: 26px !important;
+    /* Scaled down from 36px */
     line-height: 32px !important;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -549,8 +552,10 @@ header h1 {
 .dropbtn {
     background-color: #10201D;
     color: #C1BCB4;
-    padding: 8px 14px; /* Reduced from 12px 24px */
-    font-size: 13px;    /* Reduced from 16px */
+    padding: 8px 14px;
+    /* Reduced from 12px 24px */
+    font-size: 13px;
+    /* Reduced from 16px */
     font-weight: bold;
     border: 2px solid #C1BCB4;
     border-radius: 6px;
@@ -597,7 +602,8 @@ header h1 {
     position: absolute;
     right: 40px;
     top: 50%;
-    transform: translateY(-50%); /* Centers the menu button vertically on the right */
+    transform: translateY(-50%);
+    /* Centers the menu button vertically on the right */
     z-index: 10;
 }
 
@@ -634,23 +640,26 @@ header h1 {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack title and menu vertically on phones */
+        flex-direction: column;
+        /* Stack title and menu vertically on phones */
         height: auto;
         padding: 20px 15px;
         gap: 12px;
     }
 
     header h1 {
-        font-size: 20px !important; /* Smaller text scale for phone screens */
+        font-size: 20px !important;
+        /* Smaller text scale for phone screens */
         line-height: 26px !important;
     }
 
     #navigation {
-        position: static; /* Move menu below title and center it */
-        right: auto;
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        position: absolute;
+        right: 40px;
+        top: 55%;
+        /* Shifted down from 50% for lower placement */
+        transform: translateY(-50%);
+        z-index: 10;
     }
 
     .dropbtn {
@@ -661,7 +670,8 @@ header h1 {
     .dropdown-content {
         left: 50%;
         right: auto;
-        transform: translateX(-50%); /* Center dropdown panel under button */
+        transform: translateX(-50%);
+        /* Center dropdown panel under button */
         min-width: 160px;
     }
 
