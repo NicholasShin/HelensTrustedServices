@@ -511,116 +511,101 @@ header h1 {
 
 
 /* ==========================================================================
-   Mobile & Small Screen Responsive Styles
+   Header & Navigation (Sized down to prevent overlap)
    ========================================================================== */
 
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Reduced container height */
+    border: 4px solid #10201D;
+    background-color: #2E4332;
+    margin: 20px auto;
+    width: 95%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0 120px 0 20px; /* Right padding reserves space for menu button */
+}
+
+header h1 {
+    background-color: transparent;
+    color: #CABA9C;
+    margin: 0;
+    text-align: center;
+    font-size: 26px !important; /* Scaled down from 36px */
+    line-height: 32px !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#navigation {
+    position: absolute;
+    right: 20px;
+    z-index: 10;
+}
+
+/* Scaled down Menu Button */
+.dropbtn {
+    background-color: #10201D;
+    color: #C1BCB4;
+    padding: 8px 14px; /* Reduced from 12px 24px */
+    font-size: 13px;    /* Reduced from 16px */
+    font-weight: bold;
+    border: 2px solid #C1BCB4;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+
+/* ==========================================================================
+   Table Containment (Prevents breaking out of .description box)
+   ========================================================================== */
+
+/* Responsive wrapper ensures table never spills outside parent padding */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0 10px 0;
+    box-sizing: border-box;
+}
+
+.services-table,
+.rates-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    table-layout: auto;
+}
+
+.services-table th,
+.services-table td,
+.rates-table th,
+.rates-table td {
+    border: 2px solid #102820;
+    padding: 10px 12px; /* Compact padding keeps table contained */
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+/* Mobile responsive adjustments */
 @media (max-width: 768px) {
-    /* Header & Title Adjustments */
     header {
-        flex-direction: column;
         height: auto;
-        padding: 20px 15px;
-        text-align: center;
+        padding: 15px !important;
     }
 
     header h1 {
-        font-size: 1.8rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 12px;
+        font-size: 20px !important;
+        line-height: 26px !important;
+        padding: 0 !important;
     }
 
-    /* Stack navigation below header title to prevent overlapping */
-    #navigation {
-        position: static;
-        right: auto;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    /* Center dropdown menu on mobile screens */
-    .dropdown-content {
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        max-width: 250px;
-    }
-
-    /* Content Card Spacing & Text Sizing */
     .description {
-        width: 95%;
-        padding: 20px 15px;
-        margin: 20px auto;
-    }
-
-    .description h2 {
-        font-size: 1.5rem;
-    }
-
-    .description p, 
-    .description li {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    /* Stack Service Button Links Vertically for Easy Tapping */
-    #serviceNav nav {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px 10px;
-    }
-
-    #serviceNav nav a {
-        margin: 0;
-        font-size: 1.1rem;
-        padding: 10px;
-        display: block;
-    }
-
-    /* Responsive Tables (Smooth Horizontal Scroll for Mobile) */
-    .services-table,
-    .rates-table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .services-table th, .services-table td,
-    .rates-table th, .rates-table td {
-        padding: 10px 8px;
-        font-size: 0.9rem;
-    }
-
-    /* Testimonials Mobile Stack */
-    .testimonial-header {
-        width: 80%;
-    }
-
-    .testimonial-card {
-        width: 90%;
-        margin-bottom: 15px;
-    }
-
-    /* Contact Page Form Width */
-    .contact-page form {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    /* Mobile Footer Layout */
-    .site-footer {
-        padding: 20px 15px;
-        width: 95%;
-    }
-
-    .footer-links {
-        gap: 15px;
-    }
-
-    .footer-divider {
-        width: 85%;
+        padding: 20px 15px; /* Reduces container padding on narrow screens */
     }
 }
